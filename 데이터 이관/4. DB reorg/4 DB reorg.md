@@ -39,7 +39,6 @@
 
 ```
 
-![Untitled](4%20DB%20reorg%20e3fa87bdeca54438aba1f5d2fc0b9474/Untitled.png)
 
 1. emp 테이블의 실제 사용하고 있는 block 의 개수
     
@@ -55,7 +54,6 @@
            169
     ```
     
-    ![Untitled](4%20DB%20reorg%20e3fa87bdeca54438aba1f5d2fc0b9474/Untitled%201.png)
     
 
 1. High water mark 까지 할당된 block 의 개수 확인
@@ -71,9 +69,7 @@
     ----------
            256
     ```
-    
-    ![Untitled](4%20DB%20reorg%20e3fa87bdeca54438aba1f5d2fc0b9474/Untitled%202.png)
-    
+        
 
 1. 테이블 compact 작업 수행(COMPACT 작업 수행 명령어는 2문장)
     
@@ -84,9 +80,7 @@
     # emp테이블의 공간을 작게 줄이기
     alter table emp shrink space compact;
     ```
-    
-    ![Untitled](4%20DB%20reorg%20e3fa87bdeca54438aba1f5d2fc0b9474/Untitled%203.png)
-    
+        
 
 1. emp 테이블의 실제 사용하고 있는 block 의 수 (169 → 76로 줄어들었음)
     
@@ -99,9 +93,7 @@
     ----------
             76
     ```
-    
-    ![Untitled](4%20DB%20reorg%20e3fa87bdeca54438aba1f5d2fc0b9474/Untitled%204.png)
-    
+        
 
 1.  High water mark 까지 할당된 block 의 개수 확인
     
@@ -119,7 +111,6 @@
     
     ⇒ BLOCK의 수는 줄었는데, HWM까지 할당된 BLOCK의 개수는 그대로인 것을 확인할 수 있다. 그래서 내려주는 작업이 필요한데, 그게 바로 SHRINK
     
-    ![Untitled](4%20DB%20reorg%20e3fa87bdeca54438aba1f5d2fc0b9474/Untitled%205.png)
     
 
 1. High water mark 를 내려주는 작업 SHRINK 수행(256 → 88)
@@ -133,7 +124,6 @@
      where  segment_name='EMP';
     ```
     
-    ![Untitled](4%20DB%20reorg%20e3fa87bdeca54438aba1f5d2fc0b9474/Untitled%206.png)
     
 2. 인덱스의 상태가 VALID한지 확인하기
     
@@ -151,4 +141,3 @@
     EMP_EMPNO                      VALID
     ```
     
-    ![Untitled](4%20DB%20reorg%20e3fa87bdeca54438aba1f5d2fc0b9474/Untitled%207.png)
