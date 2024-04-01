@@ -20,8 +20,6 @@
     oracle   11500  8878  0 10:09 pts/2    00:00:00 grep pmon
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled.png)
-    
 2. **shm2 DB에서 ts30000 이라는 테이블스페이스 생성**
     
     ```sql
@@ -30,7 +28,6 @@
     	datafile '/u01/app/oracle/oradata/shm2/disk1/ts30000.dbf' size 10m;
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%201.png)
     
 3.  **shm2 DB의 SOCTT유저로 접속해서 ts30000 테이블 스페이스에 emp30000테이블 생성**
     1. 생성하기
@@ -47,8 +44,6 @@
     tablespace ts30000;
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%202.png)
-    
     b. 데이터 insert
     
     ```sql
@@ -57,8 +52,7 @@
     	select empno, ename, sal
     		from emp;
     ```
-    
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%203.png)
+
     
 4. **ts30000 테이블 스페이스를 read only로 변경합니다.**
     1. read only로 변경하기
@@ -71,7 +65,7 @@
     alter tablespace ts30000 read only;
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%204.png)
+
     
     b. 잘 변경되었는지 확인하기
     
@@ -83,7 +77,7 @@
     	where t.ts# = d.ts#;
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%205.png)
+
     
 5. **ts30000 테이블 스페이스를 export 합니다.**
     
@@ -132,7 +126,7 @@
     
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%206.png)
+
     
     b. 잘 생성되었는지 확인하기
     
@@ -149,7 +143,7 @@
     
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%207.png)
+
     
     ### ⚠️ 만약에 아래와 같이 에러가 발생 했을 때 조치사항
     
@@ -183,7 +177,7 @@
     cp /u01/app/oracle/oradata/shm2/disk1/ts30000.dbf /u01/app/oracle/oradata/PROD/disk1/ts30000.dbf
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%208.png)
+
     
 7. **shm2 DB의 ts30000.dmp 파일을 PROD DB의 pump 디렉토리로 copy 합니다.**
     
@@ -192,7 +186,7 @@
     cp /home/oracle/pump_shm2/ts30000.dmp /home/oracle/pump_prod/ts30000.dmp
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%209.png)
+
     
 8. **shm2 DB에 ts30000 테이블 스페이스를 import 합니다.**
     1. import 하기 전에 PROD DB의 SYS 계정 패스워드가 무엇인지 확인하기
@@ -225,7 +219,7 @@
     SCHEDULER_ADMIN
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%2010.png)
+
     
     c. ts30000 테이블 스페이스 import
     
@@ -250,7 +244,7 @@
     
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%2011.png)
+
     
 9. **PROD DB에서 ts30000 테이블 스페이스를 read write 로 변경합니다.**
     
@@ -310,7 +304,7 @@
     29 rows selected.
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%2012.png)
+
     
 10. **PROD DB에서 emp30000테이블이 잘 조회되는지 확인합니다.**
     
@@ -322,7 +316,7 @@
     select count(*) from emp30000;
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%2013.png)
+
     
 11. **PROD DB에서 ts30000 테이블 스페이스를 read write로 변경합니다.**
     
@@ -331,4 +325,3 @@
     alter tablespace ts30000 read write;
     ```
     
-    ![Untitled](3%20%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%85%E1%85%A6%E1%84%87%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%20EXPORT%20PUMP%20IMPORT%20958c03fefdaa40d7860846f8aa947cbf/Untitled%2014.png)
