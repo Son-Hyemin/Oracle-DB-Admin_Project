@@ -37,7 +37,7 @@
              3 CURRENT                   3
     ```
     
-    ![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled.png)
+
     
 2. **log switch를 한 번 일으킵니다.** 
     
@@ -51,7 +51,7 @@
     alter system checkpoint; 
     ```
     
-    ![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled%201.png)
+
     
 4. **redo log group의 상태를 확인합니다.**
     
@@ -65,8 +65,7 @@
              2 INACTIVE                  2
              3 INACTIVE                  3
     ```
-    
-    ![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled%202.png)
+
     
     ⇒ 3번 group지울 것
     
@@ -87,7 +86,7 @@
     
     ```
     
-    ![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled%203.png)
+
     
 6. **DB를 shutdown abort로 내립니다.** 
     
@@ -96,7 +95,7 @@
     ORACLE instance shut down.
     ```
     
-    ![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled%204.png)
+
     
 7. **OS 에서 inactive 상태의 log group member를 rm으로 지웁니다.**
     
@@ -120,7 +119,7 @@
     redo01.log  redo02.log
     ```
     
-    ![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled%205.png)
+
     
 8. **DB를 startup 합니다.**
     1. **redo log file이 없기 때문에 mount → open으로 올라가지 않을 것**
@@ -141,7 +140,7 @@
     Session ID: 191 Serial number: 3
     ```
     
-    ![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled%206.png)
+
     
 9. **따라서 rm 으로 날린 inactive 상태의 redo log group을 control file에서 지웁니다.**
     1. startup mount로 올리기
@@ -176,7 +175,7 @@
         alter database drop logfile group 3;
         ```
         
-        ![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled%207.png)
+
         
     
 10. `**alter database open`으로 DB를 올립니다.**
@@ -185,7 +184,7 @@
     alter database open;
     ```
     
-    ![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled%208.png)
+
     
 11. **지워진 redo log group을 새로 추가합니다.** 
     1. 추가하기 전에 redo log group 의 상태 확인하기
@@ -201,7 +200,7 @@
         
         ```
         
-        ![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled%209.png)
+
         
     2. redo log group 새로 추가하기
         
@@ -209,9 +208,7 @@
         alter database add logfile group 3
         	'/u01/app/oracle/oradata/shm/redo03.log' size 5m;
         ```
-        
-        ![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled%2010.png)
-        
+  
 
 1. **redo log group의 상태를 확인합니다.**
     
@@ -226,7 +223,3 @@
              3 UNUSED                    0
     ```
     
-    ![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled%2011.png)
-    
-
-![Untitled](Inactive%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8B%E1%85%B4%20redo%20log%20file%E1%84%8B%E1%85%B5%20%E1%84%89%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A6%20%E1%84%83%E1%85%AC%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%A2%20542c35ceb1ca4d42830d118bd303e15a/Untitled%2012.png)
