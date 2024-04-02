@@ -18,11 +18,7 @@
     
     - archived ⇒ archiving 됐는지 여부를 알려줌. 즉 archive log file로 써졌는지 여부!
     
-    ![Untitled](Redo%20log%20group%E1%84%8B%E1%85%B4%20member%20%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8E%E1%85%AE%E1%84%80%E1%85%A1%E1%84%92%E1%85%A1%E1%84%8B%E1%85%A7%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A6%20%E1%84%8B%E1%85%A8%E1%84%87%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%20f76166c95a2246cba0f6c594326d2658/Untitled.png)
-    
-    ![Untitled](Redo%20log%20group%E1%84%8B%E1%85%B4%20member%20%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8E%E1%85%AE%E1%84%80%E1%85%A1%E1%84%92%E1%85%A1%E1%84%8B%E1%85%A7%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A6%20%E1%84%8B%E1%85%A8%E1%84%87%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%20f76166c95a2246cba0f6c594326d2658/Untitled%201.png)
-    
-    ![Untitled](Redo%20log%20group%E1%84%8B%E1%85%B4%20member%20%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8E%E1%85%AE%E1%84%80%E1%85%A1%E1%84%92%E1%85%A1%E1%84%8B%E1%85%A7%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A6%20%E1%84%8B%E1%85%A8%E1%84%87%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%20f76166c95a2246cba0f6c594326d2658/Untitled%202.png)
+
     
 2. **redo log group의 member가 몇 개인지 확인합니다**
     
@@ -39,7 +35,7 @@
              3          1
     ```
     
-    ![Untitled](Redo%20log%20group%E1%84%8B%E1%85%B4%20member%20%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8E%E1%85%AE%E1%84%80%E1%85%A1%E1%84%92%E1%85%A1%E1%84%8B%E1%85%A7%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A6%20%E1%84%8B%E1%85%A8%E1%84%87%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%20f76166c95a2246cba0f6c594326d2658/Untitled%203.png)
+
     
     **※ group 당 member가 1개 뿐임..! 이렇게 되면 member 하나가 깨지면, DB가 다운되어 올라오지 않아서 다시 깔아야하거나 다른 여러 복잡한 작업이 필요함. ★★★**
     
@@ -63,7 +59,6 @@
     
     ⇒ 각 그룹의 번호와 member의 번호가 잘 호응되는지 확인하기 
     
-    ![Untitled](Redo%20log%20group%E1%84%8B%E1%85%B4%20member%20%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8E%E1%85%AE%E1%84%80%E1%85%A1%E1%84%92%E1%85%A1%E1%84%8B%E1%85%A7%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A6%20%E1%84%8B%E1%85%A8%E1%84%87%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%20f76166c95a2246cba0f6c594326d2658/Untitled%204.png)
     
 4. **redo log group의 member를 추가합니다.**
     
@@ -80,7 +75,6 @@
     	'/u01/app/oracle/oradata/shm/redo03b.log' to group 3;
     ```
     
-    ![Untitled](Redo%20log%20group%E1%84%8B%E1%85%B4%20member%20%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8E%E1%85%AE%E1%84%80%E1%85%A1%E1%84%92%E1%85%A1%E1%84%8B%E1%85%A7%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A6%20%E1%84%8B%E1%85%A8%E1%84%87%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%20f76166c95a2246cba0f6c594326d2658/Untitled%205.png)
     
 5. **redo log group의 member가 추가되었는지 확인합니다.**
     
@@ -113,5 +107,3 @@
     6 rows selected.
     
     ```
-    
-    ![Untitled](Redo%20log%20group%E1%84%8B%E1%85%B4%20member%20%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8E%E1%85%AE%E1%84%80%E1%85%A1%E1%84%92%E1%85%A1%E1%84%8B%E1%85%A7%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A6%20%E1%84%8B%E1%85%A8%E1%84%87%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%20f76166c95a2246cba0f6c594326d2658/Untitled%206.png)
