@@ -7,9 +7,7 @@
 </br>
 
 ## 1. 수동으로 DB 생성
-**수동으로 File system 스토리지를 사용한 나의 이니셜 shm2 DB 생성하는 미니 프로젝트**
-
-📁[바로가기](https://github.com/Son-Hyemin/Oracle-DB-Admin_Project/tree/789fcc18560fef695f6b25932086b705e7ccf4a7/1.%20%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C%20DB%20%EC%83%9D%EC%84%B1)
+**수동으로 File system 스토리지를 사용한 나의 이니셜 shm2 DB 생성하는 미니 프로젝트** 📁[바로가기](https://github.com/Son-Hyemin/Oracle-DB-Admin_Project/tree/789fcc18560fef695f6b25932086b705e7ccf4a7/1.%20%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C%20DB%20%EC%83%9D%EC%84%B1)
 </br>
 </br>
 </br>
@@ -29,9 +27,7 @@
 </br>
 
 ## 3. Backup & Recovery (백업과 복구) 
-**완전복구, 불완전 복구, RMAN을 사용한 복원과 복구를 수행하는 미니 프로젝트**
-
-📁[바로가기](https://github.com/Son-Hyemin/Oracle-DB-Admin_Project/tree/789fcc18560fef695f6b25932086b705e7ccf4a7/3.%20Backup%26Recovery)
+**완전복구, 불완전 복구, RMAN을 사용한 복원과 복구를 수행하는 미니 프로젝트** 📁[바로가기](https://github.com/Son-Hyemin/Oracle-DB-Admin_Project/tree/789fcc18560fef695f6b25932086b705e7ccf4a7/3.%20Backup%26Recovery)
 
 </br>
 
