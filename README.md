@@ -38,3 +38,10 @@
 1) Hot backup을 사용하여 모든 datafile 완전 복구,복원 하기 : 👉🥰[보러가기](https://github.com/Son-Hyemin/Oracle-DB-Admin_Project/tree/789fcc18560fef695f6b25932086b705e7ccf4a7/3.%20Backup%26Recovery/1.%20(%EC%99%84%EC%A0%84%EB%B3%B5%EA%B5%AC)%20Hot%20backup%EC%9D%84%20%EC%82%AC%EC%9A%A9%ED%95%9C%20%EB%AA%A8%EB%93%A0%20data%20file%20%EB%B3%B5%EA%B5%AC)
 2) inactive 상태의 redo log file이 삭제 되었을 때 복구 : 👉🥰[보러가기](https://github.com/Son-Hyemin/Oracle-DB-Admin_Project/tree/a651547129999d5b46b610cddec11b3b6043dc3a/3.%20Backup%26Recovery/2.%20inactive%20%EC%83%81%ED%83%9C%EC%9D%98%20redo%20log%20file%EC%9D%B4%20%EC%82%AD%EC%A0%9C%20%EB%90%98%EC%97%88%EC%9D%84%20%EB%95%8C%20%EB%B3%B5%EA%B5%AC)
 3) Redo log group의 member 를 추가하여 문제 예방 : 👉🥰[보러가기](https://github.com/Son-Hyemin/Oracle-DB-Admin_Project/tree/855bae31ad8fbfa2aa362ddbe587217e79e3264f/3.%20Backup%26Recovery/3.%20Redo%20log%20group%EC%9D%98%20member%20%EB%A5%BC%20%EC%B6%94%EA%B0%80%ED%95%98%EC%97%AC%20%EB%AC%B8%EC%A0%9C%20%EC%98%88%EB%B0%A9%ED%95%98%EA%B8%B0)
+
+</br>
+</br>
+
+## 4. 11g RAC 설치
+리눅스 기반의 2 NODE RAC 구성
+👉🥰[보러가기](https://github.com/Son-Hyemin/Oracle-DB-Project/tree/cf318be810b74307040dcfa3ea6f6b5cebe8c2e5/4.%2011g%20RAC%20%EC%84%A4%EC%B9%98)
