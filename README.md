@@ -27,7 +27,7 @@
 </br>
 
 ## 3. Backup & Recovery (백업과 복구) 
-**완전복구, 불완전 복구, RMAN을 사용한 복원과 복구를 수행하는 미니 프로젝트** 📁[바로가기](https://github.com/Son-Hyemin/Oracle-DB-Admin_Project/tree/789fcc18560fef695f6b25932086b705e7ccf4a7/3.%20Backup%26Recovery)
+**완전복구, 불완전 복구, RMAN을 사용한 복원과 복구를 수행하는 미니 프로젝트** 📁[바로가기](https://github.com/Son-Hyemin/Oracle-DB-Project/tree/3be4633d4c3ecb2e8874fed0f00840478c13b727/3.%20Backup%26Recovery)
 
 </br>
 
